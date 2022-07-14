@@ -110,8 +110,8 @@ function App() {
           )}
         </div>
       </>}
-      <div style={{width: "1vw", height: "100vh", position: "absolute", backgroundColor: "red", left: 0}}></div>
-      <div style={{width: "1vw", height: "100vh", position: "absolute", backgroundColor: "green", right: 0}}></div>
+      <div style={{width: "5vw", height: "100vh", position: "absolute", background: "linear-gradient(to right, red, rgba(0,0,0,0))", left: 0}}></div>
+      <div style={{width: "5vw", height: "100vh", position: "absolute", background: "linear-gradient(to right, rgba(0,0,0,0), green)", right: 0}}></div>
     </div>
   );
 }
