@@ -13,7 +13,7 @@ function App() {
     setShouldImmobilize(false)
   }
 
-  const [questions, setQuestions] = useState([
+  const questions = [
     {
       name: "Victime à risque",
       onNo: showDontImmobilize,
@@ -74,9 +74,7 @@ function App() {
         "Aucune atteinte <strong>traumatique sévère</strong>",
       ]
     },
-  ])
-
-  const [currentIndex, setCurrentIndex] = useState(questions.length-1);
+  ];
 
   const swiped = (direction, swipedQuestion) => {
     if (direction === 'left') {
