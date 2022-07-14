@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/traumatisme_contondant/static/css/main.01762e13.css",
-    "main.js": "/traumatisme_contondant/static/js/main.76d11c5d.js",
+    "main.js": "/traumatisme_contondant/static/js/main.ea9528e1.js",
     "static/js/787.8d560219.chunk.js": "/traumatisme_contondant/static/js/787.8d560219.chunk.js",
     "index.html": "/traumatisme_contondant/index.html",
     "main.01762e13.css.map": "/traumatisme_contondant/static/css/main.01762e13.css.map",
-    "main.76d11c5d.js.map": "/traumatisme_contondant/static/js/main.76d11c5d.js.map",
+    "main.ea9528e1.js.map": "/traumatisme_contondant/static/js/main.ea9528e1.js.map",
     "787.8d560219.chunk.js.map": "/traumatisme_contondant/static/js/787.8d560219.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01762e13.css",
-    "static/js/main.76d11c5d.js"
+    "static/js/main.ea9528e1.js"
   ]
 }
