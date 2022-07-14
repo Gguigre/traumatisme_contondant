@@ -111,11 +111,6 @@ function App() {
             </>
           )}
         </div>
-        <div className="buttonsContainer">
-          <div className="noButton">✖️<br/>NON</div>
-          {questions[currentIndex].onDontKnow && <div className="dontKnowButton">❓<br />NE SAIS PAS</div>}
-          <div className="yesButton">✔️<br/>OUI</div>
-        </div>
       </>}
     </div>
   );
