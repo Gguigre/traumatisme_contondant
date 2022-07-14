@@ -1,19 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -21,18 +7,131 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
 }
 
-.App-link {
-  color: #61dafb;
+#root>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row !important;
+}
+
+.row>* {
+  margin: 5px;
+}
+
+h1 {
+  color: #282c34;
+  text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+}
+
+h2 {
+  color: #282c34;
+}
+
+.swipe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.cardContainer {
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.card {
+  background-color: #fff;
+  width: 90vw;
+  height: 75vh;
+  box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  padding-top: 1vh;
+}
+
+.card ul {
+  text-align: left;
+  margin-right: 3vw;
+  flex: 1;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.swipe:last-of-type {
+
+}
+
+.card h3 {
+  margin: 2vw;
+  color: #282c34;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup {
+  0%   { transform: scale(1,1) }
+  10%  { transform: scale(1.1,1.1) }
+  30%  { transform: scale(.9,.9) }
+  50%  { transform: scale(1,1) }
+  57%  { transform: scale(1,1) }
+  64%  { transform: scale(1,1) }
+  100% { transform: scale(1,1) }
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.yesButton {
+  height: 10vh;
+  width: 10vh;
+  background-color: yellowgreen;
+  border-radius:  5vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+.noButton {
+  height: 10vh;
+  width: 10vh;
+  background-color: tomato;
+  border-radius:  5vh;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+
+.dontKnowButton {
+  height: 10vh;
+  background-color: dodgerblue;
+  border-radius:  5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
 }
