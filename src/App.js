@@ -70,7 +70,7 @@ function App() {
         "Aucune <strong>détresse vitale</strong>",
         "Aucune d'altération du <strong>niveau de conscience</strong>",
         "Aucune difficultés de <strong>communication</strong>",
-        "Aucune influence dde <strong>l'alcoool ou d'autres drogues</strong>",
+        "Aucune influence de <strong>l'alcool ou d'autres drogues</strong>",
         "Aucune atteinte <strong>traumatique sévère</strong>",
       ]
     },
