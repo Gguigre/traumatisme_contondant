@@ -90,11 +90,22 @@ function App() {
       {shouldImmobilize === true && (
         <div className="card">
           <h1>IMMOBILISATION</h1>
+          <h2>
+            Assurer la stabilisation et l'immobilisation complète du rachis de
+            la victime à l'aide du matériel adapté (Collier cervical, MID, Plan
+            dur + araignée + cale-tête, ...)
+          </h2>
         </div>
       )}
       {shouldImmobilize === false && (
         <div className="card">
           <h1>NE PAS IMMOBILISER</h1>
+          <h2>
+            L'immobilisation de la victime n'est a priori pas nécessaire.
+            <br />
+            Procéder à la suite du bilan en prêtant attention à l'évolution des
+            signes éventuels de traumatisme du rachis.
+          </h2>
         </div>
       )}
       {(shouldImmobilize === undefined || shouldImmobilize === null) && (
