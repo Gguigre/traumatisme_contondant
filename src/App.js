@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
-import TinderCard from 'react-tinder-card'
-import './App.css';
+import React, { useState } from "react";
+import TinderCard from "react-tinder-card";
+import "./App.css";
 
 function App() {
-
   const [shouldImmobilize, setShouldImmobilize] = useState();
 
   const showImmobilize = () => {
-    setShouldImmobilize(true)
-  }
+    setShouldImmobilize(true);
+  };
   const showDontImmobilize = () => {
-    setShouldImmobilize(false)
-  }
+    setShouldImmobilize(false);
+  };
 
   const questions = [
     {
@@ -23,7 +22,7 @@ function App() {
         "<strong>Traumatisme</strong> vertébral ancien (fracture, luxation)",
         "<strong>Chirurgie</strong> de la colonne vertébrale.",
         "<strong>Maladie</strong> de la colonne vertébrale ou des os qui qui fragilise la colonne vertébrale (ostéoporose)",
-      ]
+      ],
     },
     {
       name: "Traumatisme à haut risque",
@@ -39,7 +38,7 @@ function App() {
         "Collision avec un <strong>2 roues</strong> (conducteur ou passager du 2 roues).",
         "Piéton renversé.",
         "Chute de <strong>cheval</strong> (jockey)",
-      ]
+      ],
     },
     {
       name: "Signes d'atteinte de la moelle",
@@ -50,7 +49,7 @@ function App() {
         "Engourdissement, de sensations de <strong>décharges électriques</strong> au niveau des membres (paresthésie),",
         "Perte des <strong>urines ou des matières fécales.</strong>",
         "<strong>Erection</strong> chez l’homme (victime inconsciente, victime trouvée déshabillée).",
-      ]
+      ],
     },
     {
       name: "Signes d'atteinte du rachis",
@@ -61,10 +60,10 @@ function App() {
         "Raideur de la nuque empêchant de <strong>tourner la tête.</strong>",
         "Douleur à la <strong>palpation prudente</strong> du rachis.",
         "<strong>Déformation</strong> évidente du rachis.",
-      ]
+      ],
     },
     {
-      name: 'Fiabilité des réponses de la victime',
+      name: "Fiabilité des réponses de la victime",
       onNo: showImmobilize,
       description: [
         "Aucune <strong>détresse vitale</strong>",
@@ -72,46 +71,80 @@ function App() {
         "Aucune difficultés de <strong>communication</strong>",
         "Aucune influence de <strong>l'alcool ou d'autres drogues</strong>",
         "Aucune atteinte <strong>traumatique sévère</strong>",
-      ]
+      ],
     },
   ];
 
   const swiped = (direction, swipedQuestion) => {
-    if (direction === 'left') {
-      swipedQuestion.onNo && swipedQuestion.onNo(swipedQuestion)
-    } else if (direction === 'right') {
-      swipedQuestion.onYes && swipedQuestion.onYes(swipedQuestion)
+    if (direction === "left") {
+      swipedQuestion.onNo && swipedQuestion.onNo(swipedQuestion);
+    } else if (direction === "right") {
+      swipedQuestion.onYes && swipedQuestion.onYes(swipedQuestion);
     } else {
-      swipedQuestion.onDontKnow && swipedQuestion.onDontKnow(swipedQuestion)
+      swipedQuestion.onDontKnow && swipedQuestion.onDontKnow(swipedQuestion);
     }
-  }
+  };
 
   return (
     <div className="App">
-      {shouldImmobilize === true && <div className='card'>
-                  <h1>IMMOBILISATION</h1>
-                </div>}
-      {shouldImmobilize === false && <div className='card'>
-                  <h1>NE PAS IMMOBILISER</h1>
-                </div>}
-      {(shouldImmobilize === undefined || shouldImmobilize === null) && <>
-        <div className='cardContainer'>
-          {questions.map((question) =>
-            <>
-              <TinderCard className='swipe' key={question.name} onSwipe={(dir) => swiped(dir, question)}>
-                <div className='card'>
-                  <h3>{question.name}</h3>
-                  {question.description && <ul>
-                    {question.description.map(descriptionLine => <li dangerouslySetInnerHTML={{__html:descriptionLine}}></li>)}
-                  </ul>}
-                </div>
-              </TinderCard>
-            </>
-          )}
+      {shouldImmobilize === true && (
+        <div className="card">
+          <h1>IMMOBILISATION</h1>
         </div>
-      </>}
-      <div style={{width: "3vw", height: "100vh", position: "absolute", background: "linear-gradient(to right, red, rgba(0,0,0,0))", left: 0}}></div>
-      <div style={{width: "3vw", height: "100vh", position: "absolute", background: "linear-gradient(to right, rgba(0,0,0,0), green)", right: 0}}></div>
+      )}
+      {shouldImmobilize === false && (
+        <div className="card">
+          <h1>NE PAS IMMOBILISER</h1>
+        </div>
+      )}
+      {(shouldImmobilize === undefined || shouldImmobilize === null) && (
+        <>
+          <div className="cardContainer">
+            {questions.map((question) => (
+              <>
+                <TinderCard
+                  className="swipe"
+                  key={question.name}
+                  onSwipe={(dir) => swiped(dir, question)}
+                >
+                  <div className="card">
+                    <h3>{question.name}</h3>
+                    {question.description && (
+                      <ul>
+                        {question.description.map((descriptionLine) => (
+                          <li
+                            dangerouslySetInnerHTML={{
+                              __html: descriptionLine,
+                            }}
+                          ></li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </TinderCard>
+              </>
+            ))}
+          </div>
+        </>
+      )}
+      <div
+        style={{
+          width: "3vw",
+          height: "100vh",
+          position: "absolute",
+          background: "linear-gradient(to right, red, rgba(0,0,0,0))",
+          left: 0,
+        }}
+      ></div>
+      <div
+        style={{
+          width: "3vw",
+          height: "100vh",
+          position: "absolute",
+          background: "linear-gradient(to right, rgba(0,0,0,0), green)",
+          right: 0,
+        }}
+      ></div>
     </div>
   );
 }
